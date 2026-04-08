@@ -6,6 +6,7 @@ import Boton from '../ui/Boton'
 const Formulario = () => {
     
     const [loading, setLoading] = useState(false)
+    const [open, setOpen] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -55,9 +56,27 @@ const Formulario = () => {
                             <input type="email" name="email" placeholder="Correo electrónico" required className="w-full px-6 py-3 bg-white text-gris placeholder:text-center md:placeholder:text-start placeholder-gris-oscuro placeholder:opacity-30  rounded-2xl focus:outline-none focus:ring-2 focus:ring-amber-700"/>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-                            <input type="tel" name="telefono" placeholder="Teléfono" required className="w-full px-6 py-3 bg-white text-gris placeholder:text-center md:placeholder:text-start placeholder-gris-oscuro placeholder:opacity-30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-amber-700" />
-                            <input type="text" name="servicio" placeholder="Servicio de interés" required className="w-full px-6 py-3 bg-white text-gris placeholder:text-center md:placeholder:text-start placeholder-gris-oscuro placeholder:opacity-30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-amber-700" />
+                        <div className="relative  grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 ">
+                            <input type="tel" name="telefono" placeholder="Teléfono" required className="w-full px-6 py-3  bg-white text-gris placeholder:text-center md:placeholder:text-start placeholder-gris-oscuro placeholder:opacity-30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-amber-700" />
+                            <select name="servicio" onMouseDown={() => setOpen((prev) => !prev)} onBlur={() => setOpen(false)} required defaultValue="" className="cursor-pointer appearance-none w-full pl-6 pr-10 py-3 bg-white text-gris-oscuro invalid:text-gris/40 rounded-2xl focus:outline-none focus:ring-2 focus:ring-amber-700">
+                                <option className='text-center md:text-start' value="" disabled >Servicio de interés</option>
+                                <option value="anticipo">Anticipo</option>
+                                <option value="arrendamiento">Arrendamiento</option>
+                                <option value="autorizacion">Autorización</option>
+                                <option value="compraventa">Compraventa</option>
+                                <option value="constitucion">Constitución</option>
+                                <option value="divorcio">Divorcio</option>
+                                <option value="donacion">Donación</option>
+                                <option value="legalizaciones">Legalizaciones</option>
+                                <option value="matrimonio">Matrimonio</option>
+                                <option value="otros">Otros</option>
+                                <option value="poderes">Poderes</option>
+                                <option value="rectificacion">Rectificación</option>
+                                <option value="sucesion">Sucesión</option>
+                                <option value="testamento">Testamento</option>
+                                <option value="vehicular">Vehicular</option>
+                            </select>
+                            <span className={`pointer-events-none absolute right-4 bottom-4  transition-transform duration-300 text-[10px] text-rojo ${open ? "rotate-180" : ""}`} > ▼ </span>                 
                         </div>
 
                         <div className="mb-8">

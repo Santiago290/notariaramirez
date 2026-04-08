@@ -16,12 +16,12 @@ const Home = () => {
     <>
       <Navbar></Navbar>
       <Hero image={imgNotaria}>
-        <h1 className="font-[Choplin] font-light text-[21px] sm:text-4xl md:text-5xl lg:text-[62px] leading-5 smd:leading-none  mb-3 sm:mb-5 md:mb-8">
+        <h1 className="font-[Choplin] font-light text-[25px] sm:text-4xl md:text-5xl lg:text-[62px] leading-6 smd:leading-none  mb-3 sm:mb-5 md:mb-8">
           Nuestra razón <br />
           de ser es su <span className="font-semibold">seguridad</span> <br />
           y <span className="font-semibold">confianza</span>
         </h1>
-        <Boton textSize="text-[10px] md:text-[25px]" placeholder='text-rojo' textColor="text-white" fontWeight="font-bold" border="border border-yellow-400" bg="bg-transparent" width='w-[152px] md:w-[370px]' height='h-[23px] md:h-[57px]' px='px-0' py='py-0' className="m-auto">
+        <Boton textSize="text-[12px] md:text-[25px]" placeholder='text-rojo' textColor="text-white" fontWeight="font-bold" border="border border-yellow-400" bg="bg-transparent" width='w-[175px] md:w-[370px]' height='h-[23px] md:h-[57px]' px='px-0' py='py-0' className="m-auto">
           <Typing />
         </Boton>
       </Hero>

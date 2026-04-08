@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from '../layout/Container'
 import Boton from '../ui/Boton'
+import { Link } from 'react-router'
 
 const Location = () => {
   return (
@@ -35,8 +36,9 @@ const Location = () => {
                 Garantizamos atención personalizada y seguridad jurídica en cada trámite, 
                 priorizando su tranquilidad y confianza.
               </p>
-            <Boton texto="Ver más" textSize="text-[11px] md:text-[18px]" textColor="text-rojo" fontWeight="font-normal" bg="bg-beige" px="px-2 md:px-4" py="py-1" className='hover:bg-rojo hover:text-white hover:border-rojo ease-in-out'/>
-
+            <Link key="nosotros"  to={`/nosotros`}>            
+              <Boton texto="Ver más" textSize="text-[11px] md:text-[18px]" textColor="text-rojo" fontWeight="font-normal" bg="bg-beige" px="px-2 md:px-4" py="py-1" className='hover:bg-rojo hover:text-white hover:border-rojo ease-in-out'/>
+            </Link>
             </div>
           </div>
         </div>
