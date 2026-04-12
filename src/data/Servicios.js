@@ -55,7 +55,7 @@ export const service = [
     imagen: imgArrendamiento,
     secciones: [
     {
-      titulo: "Escritura pública:",
+      titulo: "Escritura pública",
       items: [
         "• Minuta autorizada por abogado",
         "• Documento de identidad de arrendatario y arrendador",
@@ -63,7 +63,7 @@ export const service = [
       ]
     },
     {
-      titulo: "Legalización de firmas:",
+      titulo: "Legalización de firmas",
       items: [
         "• Contrato de arrendamiento",
         "• Copia de DNI de contratantes",
@@ -78,26 +78,26 @@ export const service = [
     imagen: imgLegalizacion,
     secciones: [
     {
-      titulo: "Cartas Notariales:",
+      titulo: "Cartas Notariales",
       items: [
         "• Presentar original y copia de carta a diligenciar con dirección exacta del inmueble."
       ]
     },
     {
-      titulo: "Legalización de firmas:",
+      titulo: "Legalización de firmas",
       items: [
         "• Presencia con documento de identidad de quien legalizará su firma.",
         "• Documento con firmas por legalizar."
       ]
     },
     {
-      titulo: "Legalización de Copias:",
+      titulo: "Legalización de Copias",
       items: [
         "• Presentar documentos originales y copias a legalizar."
       ]
     },
     {
-      titulo: "Apertura de libro de actas de Junta de Propietarios:",
+      titulo: "Apertura de libro de actas de Junta de Propietarios",
       items: [
         "• Presencia con documento de identidad del Presidente designado.",
         "• Acta de constitución de la Junta de Propietarios en la que se designó al Presidente.",
@@ -108,7 +108,7 @@ export const service = [
       ]
     },
     {
-      titulo: "Protestos:",
+      titulo: "Protestos",
       items: [
         "• Título valor original."
       ]
@@ -122,7 +122,7 @@ export const service = [
     imagen: imgConstitucion,
     secciones:[
       {
-        titulo: "Constitución de Sociedades/EIRL:",
+        titulo: "Constitución de Sociedades/EIRL",
         items: [
           "• Minuta autorizada por abogado.",
           "• Documento de identidad de socios.",
@@ -134,7 +134,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Constitución de Asociación:",
+        titulo: "Constitución de Asociación",
         items: [
           "• Minuta autorizada por abogado (Firmada por todos los asociados) o Acta de fundación de asociación pegada en el libro de actas aperturado firmada por todos los asociados.",
           "• Documento de identidad de intervinientes",
@@ -142,9 +142,9 @@ export const service = [
         ]
       },
       {
-        titulo: "Apertura de Libros (Actas, matrícula de acciones, contables, padrón de asociados):",
+        titulo: "Apertura de Libros (Actas, matrícula de acciones, contables, padrón de asociados)",
         items: [
-          "Primer libro:",
+          "Primer libro",
           "• Presencia con documento de identidad del Gerente General o Presidente del Consejo Directivo",
           "• Vigencia de poder que será verificada por la notaría.",
           "• Vigencia de poder (no mayor a 05 días).",
@@ -161,7 +161,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Copia certificada de Actas de Sociedades (Renuncia de Gerente General y/o remoción de Gerente General, Nombramiento de Gerente General y/o Subgerente, Otorgamiento de poder):",
+        titulo: "Copia certificada de Actas de Sociedades (Renuncia de Gerente General y/o remoción de Gerente General, Nombramiento de Gerente General y/o Subgerente, Otorgamiento de poder)",
         items: [
           "• Vigencia de poder del Gerente General (no mayor a 05 días)",
           "• Libro de actas con acta a certificar pegada en él",
@@ -172,7 +172,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Aumento de Capital:",
+        titulo: "Aumento de Capital",
         items: [
           "• Minuta autorizada por abogado",
           "• Libro de actas con el acta del acuerdo de la junta general de accionistas/ socios",
@@ -186,7 +186,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Reducción de Capital:",
+        titulo: "Reducción de Capital",
         items: [
           "• Minuta autorizada por abogado",
           "• Libro de actas con el acta de Junta general de accionistas/ socios",
@@ -199,7 +199,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Modificación de Estatutos:",
+        titulo: "Modificación de Estatutos",
         items: [
           "• Minuta autorizada por abogado",
           "• Libro de actas con el acta del acuerdo de Junta General de socios",
@@ -211,7 +211,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Sucursal en el Perú de Sociedad Constituida en el extranjero:",
+        titulo: "Sucursal en el Perú de Sociedad Constituida en el extranjero",
         items: [
           "• Minuta autorizada por abogado, suscrita por la persona facultada de la empresa matriz",
           "• Certificado de vigencia de la sociedad principal en su país de origen, con constancia de que su pacto social ni su estatuto le impiden establecer sucursales en el instrumento",
@@ -228,7 +228,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Transformación de tipo societario (EIRL a SAC):",
+        titulo: "Transformación de tipo societario (EIRL a SAC)",
         items: [
           "• Libro de actas de la empresa aperturado",
           "• Acta de decisión de transformación donde conste el acuerdo adoptado por el titular",
@@ -244,7 +244,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Transferencia de titularidad de EIRL:",
+        titulo: "Transferencia de titularidad de EIRL",
         items: [
           "• Minuta autorizada por abogado",
           "• Libro de actas aperturado",
@@ -257,7 +257,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Transferencia de acciones (acto no inscribible):",
+        titulo: "Transferencia de acciones (acto no inscribible)",
         items: [
           "Si se desea una Escritura pública:",
           "1. Minuta autorizada por abogado",
@@ -273,7 +273,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Nombramiento, remoción, renuncia y revocación de representantes/Gerente General por Escritura Pública:",
+        titulo: "Nombramiento, remoción, renuncia y revocación de representantes/Gerente General por Escritura Pública",
         items: [
           "• Libro de actas aperturado",
           "• Presencia y documento de identidad de gerente general",
@@ -286,7 +286,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Disolución y Liquidación:",
+        titulo: "Disolución y Liquidación",
         items: [
           "• Libro de actas donde conste el acuerdo de la junta general de accionistas/ socios con el nombramiento del liquidador",
           "• Copias de los DNI de todos los socios",
@@ -308,20 +308,20 @@ export const service = [
     imagen: imgPoderes,
     secciones: [
     {
-      titulo: "Carta Poder:",
+      titulo: "Carta Poder",
       items: [
         "• Presentar documento."
       ]
     },
     {
-      titulo: "Poder fuera de registro:",
+      titulo: "Poder fuera de registro",
       items: [
         "• Presencia con documento de identidad de poderdante.",
         "• Detalle de los actos de representación u objeto del poder."
       ]
     },
     {
-      titulo: "Poder por escritura pública (otorgamiento, ampliación, revocatoria):",
+      titulo: "Poder por escritura pública (otorgamiento, ampliación, revocatoria)",
       items: [
         "• Minuta autorizada por abogado.",
         "• Documento de identidad de poderdante y apoderado."
@@ -336,7 +336,7 @@ export const service = [
     imagen: imgAutorizacion,
     secciones:[
     {
-      titulo: "Autorización de viaje al interior:",
+      titulo: "Autorización de viaje al interior",
       items: [
         "• Presencia con documento de identidad del padre o de la madre.",
         "• Documento de identidad del menor.",
@@ -344,7 +344,7 @@ export const service = [
       ]
     },
     {
-      titulo: "Autorización de Viaje al Exterior:",
+      titulo: "Autorización de Viaje al Exterior",
       items: [
         "* Si el menor viaja con el padre o la madre, de todas maneras debe ser firmado el permiso por ambos padres.",
         "• Presencia con documento de identidad del padre y de la madre.",
@@ -361,7 +361,7 @@ export const service = [
     imagen: imgVehicular,
     secciones:[
     {
-      titulo: "Transferencias vehiculares:",
+      titulo: "Transferencias vehiculares",
       items: [
         "• Presencia y documento de identidad de los contratantes.",
         "• Tarjeta de identificación del vehículo.",
@@ -371,7 +371,7 @@ export const service = [
       ]
     },
     {
-      titulo: "Prescripción Adquisitiva Vehicular:",
+      titulo: "Prescripción Adquisitiva Vehicular",
       items: [
         "• Solicitud firmada por el interesado y autorizada por abogado colegiado.",
         "• Copia literal de la Partida Registral del vehículo.",
@@ -428,7 +428,7 @@ export const service = [
     
     secciones:[
       {
-      titulo: "Inventario:",
+      titulo: "Inventario",
       items: [
         "• Solicitud por escrito, presentada a petición de parte, indicando el lugar donde se efectuará el inventario.",
         "• Documento Nacional de Identidad del solicitante o, en su caso, del representante legal de la persona jurídica.",
@@ -451,7 +451,7 @@ export const service = [
     ],
     secciones:[
       {
-      titulo: "En casos de parentesco, viudez o extranjería:",
+      titulo: "En casos de parentesco, viudez o extranjería",
       items: [
         "• Dispensa del parentesco de consanguinidad colateral en tercer grado, si correspondiera.",
         "• Copia certificada del acta de defunción del cónyuge anterior o de la sentencia de divorcio, según corresponda.",
@@ -467,7 +467,7 @@ export const service = [
     imagen: imgRectificacion,
     secciones:[
     {
-      titulo: "Rectificación de Partidas de Nacimiento:",
+      titulo: "Rectificación de Partidas de Nacimiento",
       items: [
         "• Fotocopia simple del DNI del solicitante.",
         "• Partida de nacimiento que se desea rectificar.",
@@ -475,7 +475,7 @@ export const service = [
       ]
     },
     {
-      titulo: "Rectificación de Partidas de Matrimonio:",
+      titulo: "Rectificación de Partidas de Matrimonio",
       items: [
         "• Fotocopia simple del DNI del solicitante.",
         "• Partida de matrimonio a rectificar.",
@@ -484,7 +484,7 @@ export const service = [
       ]
     },
     {
-      titulo: "Rectificación de Partida de Defunción:",
+      titulo: "Rectificación de Partida de Defunción",
       items: [
         "• Fotocopia Simple del DNI del solicitante.",
         "• Partida de defunción a rectificar.",
@@ -535,7 +535,7 @@ export const service = [
     imagen: imgOtros,
     secciones:[
       {
-        titulo: "Adopción de personas mayores:",
+        titulo: "Adopción de personas mayores",
         items: [
           "* La edad del adoptante debe ser igual a la suma de la mayoría de edad del hijo por adoptar",
           "• Minuta autorizada por abogado",
@@ -546,7 +546,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Dación en pago:",
+        titulo: "Dación en pago",
         items: [
           "• Minuta autorizada por abogado",
           "• Documento de identidad de otorgantes",
@@ -558,7 +558,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Designación de Apoyo a Adulto Mayor que no pueda manifestar voluntad (solo para cobro de Pensiones):",
+        titulo: "Designación de Apoyo a Adulto Mayor que no pueda manifestar voluntad (solo para cobro de Pensiones)",
         items: [
           "• Minuta autorizada por abogado",
           "• Certificado médico emitido por un neurólogo o psiquiatra que acredite la imposibilidad de manifestar la voluntad de la persona adulta mayor",
@@ -573,7 +573,7 @@ export const service = [
         ]
       },
       {
-        titulo: "Desalojo notarial:",
+        titulo: "Desalojo notarial",
           items: [
             "• Minuta autorizada por abogado.",
             "• Testimonio de la escritura pública original del contrato de arrendamiento.",
@@ -584,7 +584,7 @@ export const service = [
           ]
       },
       {
-        titulo: "Hipoteca y levantamiento de hipoteca:",         
+        titulo: "Hipoteca y levantamiento de hipoteca",         
           items: [
               "Hipoteca",
               "• Documento de identidad de otorgantes.",
@@ -596,7 +596,7 @@ export const service = [
           ],
       },
       { 
-        titulo: "Mutuo con o sin garantía:", 
+        titulo: "Mutuo con o sin garantía", 
           items: [
             "• Documentos",
             "• Minuta autorizada por abogado.",
@@ -606,7 +606,7 @@ export const service = [
           ]
       },
       { 
-          titulo: "Patrimonio familiar:", 
+          titulo: "Patrimonio familiar", 
            items: [
             "• Minuta autorizada por abogado.",
             "• Declaración expresa de no tener deudas.",
@@ -628,7 +628,7 @@ export const service = [
           ],
       },
       {  
-        titulo: "Prescripción Adquisitiva de dominio de Inmuebles:",
+        titulo: "Prescripción Adquisitiva de dominio de Inmuebles",
            items: [
             "1. Solicitud del interesado, indicando:",
             "• El tiempo de posesión del solicitante y, de ser el caso, el de sus causantes.",
@@ -654,14 +654,14 @@ export const service = [
            ]
       },
       {  
-        titulo: "Reconocimiento de paternidad:",
+        titulo: "Reconocimiento de paternidad",
            items: [
             "• Minuta autorizada por abogado.",
             "• Documento de identidad de padre y/o madre del menor."
         ]
       },
       {  
-        titulo: "Rectificación de áreas y linderos:",
+        titulo: "Rectificación de áreas y linderos",
            items: [
             "• Minuta autorizada por abogado.",
             "• Copia literal del inmueble (Plazo máximo de vigencia: 10 días).",
@@ -675,7 +675,7 @@ export const service = [
         ]
       },
       {  
-          titulo: "Unión de hecho:",
+          titulo: "Unión de hecho",
            items: [
             "• Minuta autorizada por abogado.",
             "• Copia de DNI de ambos convivientes.",

@@ -9,6 +9,7 @@ import imgNotaria from "../assets/images/imgNotaria.jpg";
 import Boton from '../components/ui/Boton'
 import Typing from '../components/ui/Typing'
 import BotonWhatsApp from '../components/ui/BotonWhatsApp'
+import { Link } from 'react-router'
 
 
 const Home = () => {
@@ -21,9 +22,11 @@ const Home = () => {
           de ser es su <span className="font-semibold">seguridad</span> <br />
           y <span className="font-semibold">confianza</span>
         </h1>
-        <Boton textSize="text-[12px] md:text-[25px]" placeholder='text-rojo' textColor="text-white" fontWeight="font-bold" border="border border-yellow-400" bg="bg-transparent" width='w-[175px] md:w-[370px]' height='h-[23px] md:h-[57px]' px='px-0' py='py-0' className="m-auto">
-          <Typing />
-        </Boton>
+        <Link to="/servicios">
+          <Boton textSize="text-[12px] md:text-[23px]" textColor="text-white" fontWeight="font-bold" border="border border-yellow-400" bg="bg-transparent" width='w-[175px] md:w-[370px]' height='h-[23px] md:h-[57px]' px='px-0' py='py-0' className="hover:border-rojo hover:bg-rojo m-auto">
+            <Typing />
+          </Boton>
+        </Link>
       </Hero>
       <Services></Services>
       <Location></Location>

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Services = () => {
   return (
-    <Container my='my-[50px]' w='w-[320px] smd:w-[500px] lg:w-[900px] xl:w-[1150px] mx-auto my-0'>
+    <Container my='mt-[50px]' w='w-[320px] smd:w-[500px] lg:w-[900px] xl:w-[1150px] mx-auto'>
         <div className="mb-9 md:mb-18 text-center">
           <div className="title text-[23px] md:text-4xl leading-none">
             ¿Qué trámites deseas realizar hoy?

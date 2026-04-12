@@ -155,3 +155,36 @@ body {
 .animate-fadeInUp {
   animation: fadeInUp 0.5s ease forwards;
 }
+
+
+@keyframes pulseScale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes colorShift {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(90deg);
+  }
+}
+
+.animate-pulseScale {
+  animation: pulseScale 2s ease-in-out infinite;
+}
+
+.animate-colorShift {
+  animation: colorShift 3s linear infinite;
+}
+
+.animate-combo {
+  animation: 
+    pulseScale 2s ease-in-out infinite,
+    colorShift 3s linear infinite;
+}

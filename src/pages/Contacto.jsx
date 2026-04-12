@@ -134,7 +134,37 @@ const Contacto = () => {
 
           <div>
             <h2 className='text-[13px] smd:text-[23px] lg:text-[40px] font-semibold text-center md:text-start font-[Choplin]'>Legalizaciones / Counter</h2>
-             <div className='grid grid-cols-2 gap-5 md:gap-10 justify-center items-center mt-5 smd:mt-8'>
+             <div className='grid grid-cols-2 gap-5 md:gap-10 justify-center items-start mt-5 smd:mt-8'>
+              <div>
+                <h2 className='text-[12px] smd:text-[25px] lg:text-[35px] font-bold text-rojo'>Legalizaciones</h2>
+
+                <div className='flex flex-col mt-2 gap-0 smd:gap-1'>
+                  <h3 className='text-[11px] smd:text-[13px] lg:text-[25px] font-light flex items-center gap-1 smd:gap-3'>
+                    <img src={iconoWhastapp} alt="icono llamada" className="w-[14px] smd:w-[20px] lg:w-[29px]" />
+                    +51 989 408 337
+                  </h3>
+                  <h3 className='text-[11px] smd:text-[13px] lg:text-[25px] font-light flex items-center gap-1 smd:gap-3'>
+                    <img src={iconoLlamada} alt="icono llamada" className="w-[14px] smd:w-[20px] lg:w-[29px]" />
+                    Anexo: 103
+                  </h3>
+                  <h3 className='text-[11px] smd:text-[13px] lg:text-[25px] font-light flex items-center gap-1 smd:gap-3'>
+                    <img src={iconoLlamada} alt="icono llamada" className="w-[14px] smd:w-[20px] lg:w-[29px]" />
+                    Anexo: 103
+                  </h3>
+                  <h3 className='text-[7px] smd:text-[11px] lg:text-[22px] font-light flex items-center gap-1 smd:gap-3'>
+                    <img src={iconoMensaje} alt="icono mensaje" className="py-[1.2px] w-[14px] smd:w-[20px] lg:w-[29px]" />
+                    legaliza@notariaramirez.com.pe
+                  </h3>
+                  <h3 className='text-[7px] smd:text-[11px] lg:text-[22px] font-light flex items-center gap-1 smd:gap-3'>
+                    <img src={iconoMensaje} alt="icono mensaje" className="py-[1.2px] w-[14px] smd:w-[20px] lg:w-[29px]" />
+                    legaliza1@notariaramirez.com.pe
+                  </h3>
+                  <h3 className='text-[7px] smd:text-[11px] lg:text-[22px] font-light flex items-center gap-1 smd:gap-3'>
+                    <img src={iconoMensaje} alt="icono mensaje" className="py-[1.2px] w-[14px] smd:w-[20px] lg:w-[29px]" />
+                    legaliza2@notariaramirez.com.pe
+                  </h3>
+                </div>
+              </div>
               <div>
                 <h2 className='text-[12px] smd:text-[25px] lg:text-[35px] font-bold text-rojo'>Counter</h2>
 
@@ -150,46 +180,6 @@ const Contacto = () => {
                   <h3 className='text-[7px] smd:text-[11px] lg:text-[22px] font-light flex items-center gap-1 smd:gap-3'>
                     <img src={iconoMensaje} alt="icono mensaje" className="py-[1.2px] w-[14px] smd:w-[20px] lg:w-[29px]" />
                     alejandra@notariaramirez.com.pe
-                  </h3>
-                </div>
-              </div>
-              <div>
-                <h2 className='text-[12px] smd:text-[25px] lg:text-[35px] font-bold text-rojo'>Legalizaciones</h2>
-
-                <div className='flex flex-col mt-2 gap-0 smd:gap-1'>
-                  <h3 className='text-[11px] smd:text-[13px] lg:text-[25px] font-light flex items-center gap-1 smd:gap-3'>
-                    <img src={iconoWhastapp} alt="icono llamada" className="w-[14px] smd:w-[20px] lg:w-[29px]" />
-                    +51 989 408 337
-                  </h3>
-                  <h3 className='text-[11px] smd:text-[13px] lg:text-[25px] font-light flex items-center gap-1 smd:gap-3'>
-                    <img src={iconoLlamada} alt="icono llamada" className="w-[14px] smd:w-[20px] lg:w-[29px]" />
-                    Anexo: 103
-                  </h3>
-                  <h3 className='text-[7px] smd:text-[11px] lg:text-[22px] font-light flex items-center gap-1 smd:gap-3'>
-                    <img src={iconoMensaje} alt="icono mensaje" className="py-[1.2px] w-[14px] smd:w-[20px] lg:w-[29px]" />
-                    legaliza1@notariaramirez.com.pe
-                  </h3>
-                  <h3 className='text-[7px] smd:text-[11px] lg:text-[22px] font-light flex items-center gap-1 smd:gap-3'>
-                    <img src={iconoMensaje} alt="icono mensaje" className="py-[1.2px] w-[14px] smd:w-[20px] lg:w-[29px]" />
-                    legaliza2@notariaramirez.com.pe
-                  </h3>
-                </div>
-              </div>
-              <div>
-                <h2 className='text-[12px] smd:text-[25px] lg:text-[35px] font-bold text-rojo'>Legalizaciones</h2>
-
-                <div className='flex flex-col mt-2 gap-0 smd:gap-1'>
-                  <h3 className='text-[11px] smd:text-[13px] lg:text-[25px] font-light flex items-center gap-1 smd:gap-3'>
-                    <img src={iconoWhastapp} alt="icono llamada" className="w-[14px] smd:w-[20px] lg:w-[29px]" />
-                    +51 989 408 337
-                  </h3>
-                  <h3 className='text-[11px] smd:text-[13px] lg:text-[25px] font-light flex items-center gap-1 smd:gap-3'>
-                    <img src={iconoLlamada} alt="icono llamada" className="w-[14px] smd:w-[20px] lg:w-[29px]" />
-                    Anexo: 102
-                  </h3>
-                  <h3 className='text-[7px] smd:text-[11px] lg:text-[22px] font-light flex items-center gap-1 smd:gap-3'>
-                    <img src={iconoMensaje} alt="icono mensaje" className="py-[1.2px] w-[14px] smd:w-[20px] lg:w-[29px]" />
-                    legaliza@notariaramirez.com.pe
                   </h3>
                 </div>
               </div>
