@@ -20,6 +20,7 @@ import Donacion from "./pages/servicios/Donacion"
 import Sucesion from "./pages/servicios/Sucesion"
 import Otros from "./pages/servicios/Otros"
 import Scroll from "./components/ui/Scroll"
+import LibroReclamaciones from "./pages/LibroReclamaciones"
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/ubicanos" element={<Ubicacion />} />
         <Route path="/contacto" element={<Contacto />} />
-
+        <Route path="/libro-reclamaciones" element={<LibroReclamaciones />} />
         <Route path="/servicios/:slug" element={<ServicioDynamic />} />
       </Routes>
     </>

@@ -22,10 +22,10 @@ const Cita = () => {
               <div className="w-full h-full gap-2 lg:gap-6 flex flex-col text-center justify-center items-center relative">
                 <div className="absolute flex justify-center items-center -top-7 lg:-top-12 left-1/2 -translate-x-1/2  w-[50px] h-[50px] lg:w-24 lg:h-24 rounded-full bg-rojo">
                   <img
-  className="w-11 h-11 sm:w-20 sm:h-20 animate-combo"
-  src={whatsappIcon}
-  alt="WhatsApp"
-/>
+                      className="w-11 h-11 sm:w-20 sm:h-20 animate-pulseScale"
+                      src={whatsappIcon}
+                      alt="WhatsApp"
+                    />
                 </div>
                   <h3 className="mt-0 lg:mt-5 text-[17px] xl:text-[40px] lg:text-3xl text-white font-light">
                     Escríbenos por <span className="font-bold">Whastapp</span>

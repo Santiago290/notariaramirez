@@ -55,7 +55,7 @@ const Footer = () => {
               <Link to="#"  onClick={(e) => e.preventDefault()} className="text-gris text-[14px] font-light py-2 w-full">
                 Términos y condiciones
               </Link>
-              <Link to="#"  onClick={(e) => e.preventDefault()} className="text-gris text-[14px] font-light py-2 w-full">
+              <Link to="/libro-reclamaciones" className="text-gris text-[14px] font-light py-2 w-full">
                 Libro de reclamaciones
               </Link>
             </div>
