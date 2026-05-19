@@ -9,7 +9,7 @@ body {
 
 @font-face {
   font-family: "Choplin";
-  src: url("/src/assets/fonts/Choplin-Extralight.ttf") format("truetype");
+  src: url("/src/assets/fonts/Choplin-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-display: swap;
 }
@@ -37,7 +37,7 @@ body {
 
 @font-face {
   font-family: "Choplin";
-  src: url("/src/assets/fonts/Choplin-Semibold.ttf") format("truetype");
+  src: url("/src/assets/fonts/Choplin-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-display: swap;
 }
@@ -79,15 +79,15 @@ body {
 
 @font-face {
   font-family: "Inter";
-  src: url("/src/assets/fonts//Inter_18pt-Medium.ttf") format("truetype");
-  font-weight: 600;
+  src: url("/src/assets/fonts/Inter_18pt-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("/src/assets/fonts//Inter_18pt-Regular.ttf") format("truetype");
-  font-weight: 500;
+  src: url("/src/assets/fonts/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-display: swap;
 }
 
@@ -113,7 +113,7 @@ body {
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
-  --breakpoint-3xl: 1800px;
+  --breakpoint-3xl: 2000px;
 }
 
 @utility title {

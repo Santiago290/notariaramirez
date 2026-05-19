@@ -1,23 +1,18 @@
 import React,{useState} from 'react'
-import Navbar from '../../components/layout/Navbar'
-import Footer from '../../components/layout/Footer'
 import Hero from "../../components/blocks/Hero"
-import Cita from '../../components/blocks/Cita'
 import { service } from "../../data/Servicios.js";
 import Container from '../../components/layout/Container.jsx'
 import { useParams } from 'react-router-dom'
-import BotonWhatsApp from '../../components/ui/BotonWhatsApp.jsx'
 
 const Arrendamiento = () => {
 
   const [abierto, setAbierto] = useState(null);
-  const { slug } = useParams();
+  const { slug = "arrendamiento" } = useParams();
   const servicio = service.find(s => s.slug === slug); 
 
   return (
     <>
-        <Navbar></Navbar>
-        <Hero image={servicio.imagen}>
+        <Hero image={servicio.imagen} imageAlt={`Servicio notarial de ${servicio.titulo} en la Notaría Alejandro Ramírez Carranza`}>
           <div className='flex flex-col items-center gap-4 smd:gap-7 md:gap-14'>
             <img 
               src={servicio.icono} 
@@ -30,17 +25,18 @@ const Arrendamiento = () => {
           </div>
         </Hero>
 
-        <div className='w-full pt-10 md:pt-18'> 
-          <Container><h2 className='title text-center text-black leading-7 md:leading-12 mb-7 sm:mb-10 md:mb-13'>¿Cuáles son los requisitos?</h2></Container>
-        </div>
+        <div className='flex flex-col gap-7 md:gap-12 py-10 md:py-20'>
+          <div className='w-full'> 
+            <Container><h2 className='title text-center text-black leading-7 md:leading-12'>Requisitos</h2></Container>
+          </div>
 
-        <div className='w-full pt-0 md:pt-10'> 
+          <div className='w-full'>  
           <Container>
             <div className="w-full flex flex-col gap-0 sm:gap-1">
                {servicio.secciones?.map((item, i) => (
                 <div key={i} className="mb-3">
                   <div onClick={() => setAbierto(abierto === i ? null : i)} className="bg-gris-muy-claro flex justify-between items-center px-6 py-2 rounded-[20px] xl:rounded-full cursor-pointer font-bold text-sm md:text-xl">
-                    {item.titulo}
+                    <h3 className="min-w-0 leading-tight break-words">{item.titulo}</h3>
                     <span className={`transition-transform duration-300 text-sm text-rojo ${ abierto === i ? "rotate-180" : ""}`}>
                       ▼
                     </span>
@@ -58,11 +54,8 @@ const Arrendamiento = () => {
               ))}
             </div>
           </Container>
+          </div>
         </div> 
-
-        <Cita></Cita>
-        <Footer></Footer>
-        <BotonWhatsApp />
     </>
   )
 }

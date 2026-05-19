@@ -1,5 +1,5 @@
 import express from 'express'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 import cors from 'cors'
 import dotenv from 'dotenv'
 
@@ -10,88 +10,156 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+const requiredMailConfig = [
+  'RESEND_API_KEY',
+  'MAIL_FROM',
+  'MAIL_TO'
+]
+
+const escapeHtml = (value = '') => {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;')
+}
+
+const renderField = (label, value) => `
+  <tr>
+    <td style="padding: 12px 0; color: #6d6d6d; font-size: 13px; width: 42%; vertical-align: top;">${label}</td>
+    <td style="padding: 12px 0; color: #212121; font-size: 14px; font-weight: 600; vertical-align: top;">${escapeHtml(value || 'No indicado')}</td>
+  </tr>
+`
+
+const renderSection = (title, rows) => `
+  <div style="background-color: #ffffff; border: 1px solid #e6e6e6; border-radius: 12px; padding: 22px; margin-bottom: 18px;">
+    <h3 style="color: #7c0600; font-size: 17px; margin: 0 0 12px; font-weight: 700;">${title}</h3>
+    <table role="presentation" cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse;">
+      ${rows.join('')}
+    </table>
+  </div>
+`
+
+const validateMailConfig = (res) => {
+  const missingConfig = requiredMailConfig.filter((key) => !process.env[key])
+
+  if (missingConfig.length > 0) {
+    res.status(500).json({ message: 'Faltan variables de entorno para enviar el correo', missingConfig })
+    return false
+  }
+
+  return true
+}
+
 app.post('/send-email', async (req, res) => {
   try {
-    const { nombres, apellidos, email, telefono, servicio, consulta } = req.body
+    if (!validateMailConfig(res)) return
 
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-      }
-    })
+    const resend = new Resend(process.env.RESEND_API_KEY)
+    const {
+      nombres,
+      apellidos,
+      email,
+      telefono,
+      servicio,
+      consulta,
+      tipoDocumento,
+      numeroDocumento,
+      direccion,
+      tipoReclamo,
+      detalleReclamo,
+      pedidoConsumidor,
+      aceptarTratamiento
+    } = req.body
 
-    await transporter.sendMail({
-      from: `"${nombres} ${apellidos}" <${email}>`,
-      to: process.env.EMAIL_USER,
-      subject: 'Nueva consulta desde la web',
-      html: `
-    <div style="background-color: #ffffff; padding: 40px 20px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-      <div style="max-width: 600px; margin: 0 auto;">
-        
-        <!-- Encabezado Estilo Minimal -->
-        <div style="margin-bottom: 30px; text-align: left;">
-          <h2 style="color: #1a1a1a; margin: 0; font-size: 28px; font-weight: 700;">Nueva consulta recibida</h2>
-          <p style="color: #666; margin-top: 10px; font-size: 16px;">Aquí tienes los detalles del formulario de contacto.</p>
-        </div>
+    const isLibroReclamaciones = Boolean(tipoReclamo || detalleReclamo || pedidoConsumidor)
+    const subject = isLibroReclamaciones
+      ? 'Nuevo registro en el Libro de Reclamaciones'
+      : 'Nueva consulta desde la web'
 
-        <!-- Tarjeta Principal (Basada en la imagen) -->
-        <div style="background-color: #ffead9; border-radius: 32px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-          
-          <p style="color: #7c0600; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; margin-bottom: 15px;">
-            Resumen de la consulta
-          </p>
+    const html = isLibroReclamaciones
+      ? `
+        <div style="background-color: #f4f4f4; padding: 36px 18px; font-family: Inter, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+          <div style="max-width: 680px; margin: 0 auto; background-color: #ffffff; border-radius: 18px; overflow: hidden; box-shadow: 0 14px 38px rgba(33, 33, 33, 0.12);">
+            <div style="background-color: #7c0600; padding: 28px 30px; border-bottom: 6px solid #fab937;">
+              <p style="color: #ffead9; margin: 0 0 8px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;">Notaria Ramirez</p>
+              <h2 style="color: #ffffff; margin: 0; font-size: 28px; line-height: 1.2; font-weight: 700;">Libro de Reclamaciones</h2>
+              <p style="color: #fde1c6; margin: 10px 0 0; font-size: 15px;">Nuevo registro recibido desde la pagina web</p>
+            </div>
 
-          <h3 style="color: #1a1a1a; font-size: 22px; margin: 0 0 5px 0;">${nombres} ${apellidos}</h3>
-          <p style="color: #555; font-size: 16px; margin: 0 0 30px 0;">${servicio}</p>
+            <div style="padding: 28px 30px 12px; background-color: #fffbf8;">
+              <div style="background-color: #ffffff; border-left: 5px solid #7c0600; border-radius: 12px; padding: 18px 20px; margin-bottom: 18px;">
+                <p style="margin: 0 0 6px; color: #6d6d6d; font-size: 13px;">Datos del proveedor</p>
+                <p style="margin: 0; color: #212121; font-size: 14px; line-height: 1.7;">
+                  <strong>RUC:</strong> 10178949913<br>
+                  <strong>Razon Social:</strong> Rolando Alejandro Ramirez Carranza<br>
+                  <strong>Domicilio:</strong> Av. Cesar Vallejo 290, Lince
+                </p>
+              </div>
 
-          <!-- Tabla de Datos -->
-          <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
-            <tr>
-              <td style="padding: 12px 0; border-bottom: 1px solid rgba(124, 6, 0, 0.1); color: #666; font-size: 15px;">Email</td>
-              <td style="padding: 12px 0; border-bottom: 1px solid rgba(124, 6, 0, 0.1); color: #1a1a1a; text-align: right; font-weight: 500;">${email}</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px 0; border-bottom: 1px solid rgba(124, 6, 0, 0.1); color: #666; font-size: 15px;">Teléfono</td>
-              <td style="padding: 12px 0; border-bottom: 1px solid rgba(124, 6, 0, 0.1); color: #1a1a1a; text-align: right; font-weight: 500;">${telefono}</td>
-            </tr>
-          </table>
+              ${renderSection('1. Datos del consumidor', [
+                renderField('Nombres', nombres),
+                renderField('Apellidos', apellidos),
+                renderField('Tipo de documento', tipoDocumento),
+                renderField('Numero de documento', numeroDocumento),
+                renderField('Direccion', direccion),
+                renderField('Correo electronico', email),
+                renderField('Telefono', telefono)
+              ])}
 
-          <!-- Sección de Mensaje / Consulta -->
-          <div style="margin-top: 10px;">
-            <p style="color: #666; font-size: 14px; margin-bottom: 8px;">Mensaje:</p>
-            <div style="font-size: 16px; color: #1a1a1a; line-height: 1.6; font-weight: 400;">
-              ${consulta}
+              ${renderSection('2. Detalle del reclamo', [
+                renderField('Tipo de reclamo', tipoReclamo),
+                renderField('Detalle', detalleReclamo)
+              ])}
+
+              ${renderSection('3. Pedido del consumidor', [
+                renderField('Pedido', pedidoConsumidor),
+                renderField('Acepta tratamiento de datos', aceptarTratamiento ? 'Si' : 'No')
+              ])}
             </div>
           </div>
+        </div>
+      `
+      : `
+        <div style="background-color: #ffffff; padding: 40px 20px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+          <div style="max-width: 600px; margin: 0 auto;">
+            <h2 style="color: #1a1a1a; margin: 0 0 10px; font-size: 28px; font-weight: 700;">Nueva consulta web</h2>
+            <p style="color: #666; margin: 0 0 25px; font-size: 16px;">Formulario de contacto - Notaria Ramirez</p>
 
-          <!-- Botón de Acción Estilo Moderno -->
-          <div style="margin-top: 40px; text-align: center;">
-            <a href="mailto:${email}" style="background-color: #7c0600; color: #ffffff; padding: 15px 35px; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-block; font-size: 16px;">
-              Responder ahora
-            </a>
+            <div style="background-color: #f5f5f5; border-left: 4px solid #bd1714; border-radius: 8px; padding: 25px; margin-bottom: 20px;">
+              <p><strong>Nombres:</strong> ${escapeHtml(nombres)}</p>
+              <p><strong>Apellidos:</strong> ${escapeHtml(apellidos)}</p>
+              <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+              <p><strong>Telefono:</strong> ${escapeHtml(telefono)}</p>
+              <p><strong>Servicio:</strong> ${escapeHtml(servicio)}</p>
+            </div>
+
+            <div style="background-color: #f5f5f5; border-left: 4px solid #bd1714; border-radius: 8px; padding: 25px;">
+              <h3 style="color: #1a1a1a; font-size: 18px; margin: 0 0 15px;">Consulta</h3>
+              <p style="color: #1a1a1a; font-size: 15px; line-height: 1.6; margin: 0;">${escapeHtml(consulta)}</p>
+            </div>
           </div>
-
         </div>
+      `
 
-        <!-- Pie de página -->
-        <div style="margin-top: 30px; text-align: center; color: #999; font-size: 12px;">
-          Enviado desde el sistema de gestión web.
-        </div>
-      </div>
-    </div>
-  `
+    const { error } = await resend.emails.send({
+      from: `Notaria Ramirez <${process.env.MAIL_FROM}>`,
+      to: [process.env.MAIL_TO],
+      replyTo: email,
+      subject,
+      html
     })
 
-    res.status(200).json({ message: 'Correo enviado correctamente' })
+    if (error) {
+      console.error(error)
+      return res.status(400).json({ message: error.message || 'Resend rechazo el envio del correo', error })
+    }
 
+    res.status(200).json({ message: 'Correo enviado correctamente' })
   } catch (error) {
     console.error(error)
-    console.log(process.env.EMAIL_USER)
-    console.log(process.env.EMAIL_PASS)
-    res.status(500).json({ message: 'Error al enviar correo' })
-
+    res.status(500).json({ message: error.message || 'Error al enviar el correo' })
   }
 })
 

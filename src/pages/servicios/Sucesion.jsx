@@ -1,23 +1,18 @@
 import React from 'react'
-import Navbar from '../../components/layout/Navbar'
-import Footer from '../../components/layout/Footer'
 import Hero from "../../components/blocks/Hero"
-import Cita from '../../components/blocks/Cita'
 import { service } from "../../data/Servicios.js";
 import Container from '../../components/layout/Container.jsx'
 import { useParams } from 'react-router-dom'
-import BotonWhatsApp from '../../components/ui/BotonWhatsApp.jsx'
 
 
 const Sucesion = () => {
 
-  const { slug } = useParams();
+  const { slug = "sucesion" } = useParams();
   const servicio = service.find(s => s.slug === slug); 
 
   return (
     <>
-        <Navbar />
-        <Hero image={servicio.imagen}>
+        <Hero image={servicio.imagen} imageAlt={`Servicio notarial de ${servicio.titulo} en la Notaría Alejandro Ramírez Carranza`}>
           <div className='flex flex-col items-center gap-4 smd:gap-7 md:gap-14'>
             <img 
               src={servicio.icono} 
@@ -32,28 +27,26 @@ const Sucesion = () => {
           </div>
         </Hero>
 
-        <div className='w-full pt-10 md:pt-18'> 
-          <Container><h2 className='title text-center text-black leading-7 md:leading-12 mb-7 sm:mb-10 md:mb-13'>¿Cuáles son los requisitos?</h2></Container>
-        </div>
+        <div className='flex flex-col gap-7 md:gap-12 py-10 md:py-20'>
+          <div className='w-full'> 
+            <Container><h2 className='title text-center text-black leading-7 md:leading-12'>Requisitos</h2></Container>
+          </div>
 
-        <div className='w-full pt-0 md:pt-10'> 
-          <Container>
-            <div className='flex flex-col gap-3 md:gap-6'>
-              {servicio.requisitos?.map((item, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <p className="text-[13px] md:text-xl">
-                    <span className="text-rojo">{item.split(" ")[0]}</span> {item.split(" ").slice(1).join(" ")}
-                  </p>
-                </li>
-              ))}
+          <div className='w-full'>  
+            <Container>
+              <div className='flex flex-col gap-3 md:gap-6'>
+                {servicio.requisitos?.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <p className="text-[13px] md:text-xl">
+                      <span className="text-rojo">{item.split(" ")[0]}</span> {item.split(" ").slice(1).join(" ")}
+                    </p>
+                  </li>
+                ))}
 
-            </div> 
-          </Container>
+              </div> 
+            </Container>
+          </div>
         </div> 
-
-        <Cita></Cita>
-        <Footer></Footer>
-        <BotonWhatsApp />
     </>
   )
 }

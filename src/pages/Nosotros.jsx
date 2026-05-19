@@ -1,23 +1,17 @@
 import React from 'react'
-import Navbar from '../components/layout/Navbar'
-import Footer from '../components/layout/Footer'
-import Cita from '../components/blocks/Cita'
 import Hero from '../components/blocks/Hero'
 import imgFirma from "../assets/images/imgFirma.jpg";
 import Container from '../components/layout/Container';
 import iconoMision from "../assets/icons/mision.svg"
 import iconoVision from "../assets/icons/vision.svg"
-import BotonWhatsApp from '../components/ui/BotonWhatsApp'
 
 const Nosotros = () => {
   return (
     <>
-      <Navbar></Navbar>
-      <Hero image={imgFirma}>
-        <h1 className="font-[Choplin] font-light text-[21px] sm:text-3xl md:text-5xl lg:text-[62px] leading-5 smd:leading-none  mb-3 sm:mb-5 md:mb-8">
-          Nuestra razón <br />
-          de ser es su <span className="font-semibold">seguridad</span> <br />
-          y <span className="font-semibold">confianza</span>
+      <Hero image={imgFirma} imageAlt="Firma notarial en la Notaría Alejandro Ramírez Carranza">
+        <h1 className="font-[Choplin] font-light text-[25px] sm:text-4xl md:text-5xl lg:text-[62px] leading-6 smd:leading-none  mb-3 sm:mb-5 md:mb-8">
+          Nuestra finalidad <br />
+          es brindarle <span className="font-semibold"> <br /> seguridad</span>
         </h1>
       </Hero>
       <section className='py-6 md:py-25'>
@@ -34,8 +28,8 @@ const Nosotros = () => {
       <section className='bg-beige py-6 md:py-25'>
         <Container my='my-0'>
           <div className='gap-1 flex flex-col justify-center items-center '>
-            <h2 className="text-center title">El notario</h2>
-            <h3 className="font-[Choplin] font-semibold text-gris-oscuro text-[19px] md:text-[40px] text-center">Alejandro Ramirez Carranza</h3>
+            <h2 className="text-center title">El Notario</h2>
+            <h3 className="font-[Choplin] font-semibold text-gris-oscuro text-[19px] md:text-[40px] text-center">Alejandro Ramírez Carranza</h3>
             <p className='text-gris-oscuro font-regular text-[13px] md:text-[22px] leading-4 md:leading-6 text-center m-4'>Abogado por la Universidad Nacional de Trujillo, 
               Magíster en Derecho por la misma casa de estudios y Doctor en Derecho y Ciencias Políticas por la Universidad de San Martín de Porres. <br /><br /> Actualmente, es Notario de Lima 
               desde el año 1999, desarrollando una destacada trayectoria profesional en el ejercicio de la función notarial, con especial énfasis en materias de derecho civil y registral. 
@@ -44,7 +38,7 @@ const Nosotros = () => {
           </div>
         </Container>
       </section>
-      <section className="pt-10 md:pt-24">
+      <section className="py-10 md:py-24">
         <Container my="my-20px">
           <div className='flex flex-col gap-5 md:gap-10 justify-center items-center'>
             <div className="w-full h-[224px] smd:h-[171px] md:h-[340px] lg:h-[216px] bg-gris-claro flex flex-col smd:flex-row items-center justify-center gap-0 smd:gap-12 rounded-3xl px-6 md:px-12 py-8 md:py-12">
@@ -68,9 +62,6 @@ const Nosotros = () => {
           </div>
         </Container>
       </section>
-      <Cita></Cita>
-      <Footer></Footer>
-      <BotonWhatsApp />
     </>
   )
 }

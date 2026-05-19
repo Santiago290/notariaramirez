@@ -11,6 +11,7 @@ const Location = () => {
           <div className="flex flex-col lg:flex-row justify-center items-center w-full gap-8 p-[15px] smd:p-[20px] lg:p-[10px]">
             <div className="flex justify-center">
                 <iframe
+                  title="Mapa de ubicación de la Notaría Alejandro Ramírez Carranza"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.3445232410954!2d-77.04053631549353!3d-12.088550312112655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c85e52b5fd5d%3A0x785d4b2405f696d8!2sAv.%20C%C3%A9sar%20Vallejo%20290%2C%20Lima%2015073!5e0!3m2!1ses-419!2spe!4v1764196264547!5m2!1ses-419!2spe"
                   className=" w-full smd:w-[450px] smd:h-[415px] rounded-md smd:rounded-4xl"
                   allowFullScreen

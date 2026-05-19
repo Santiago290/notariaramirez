@@ -144,7 +144,7 @@ export const service = [
       {
         titulo: "Apertura de Libros (Actas, matrícula de acciones, contables, padrón de asociados)",
         items: [
-          "Primer libro",
+          "Primer libro:",
           "• Presencia con documento de identidad del Gerente General o Presidente del Consejo Directivo",
           "• Vigencia de poder que será verificada por la notaría.",
           "• Vigencia de poder (no mayor a 05 días).",
@@ -165,7 +165,7 @@ export const service = [
         items: [
           "• Vigencia de poder del Gerente General (no mayor a 05 días)",
           "• Libro de actas con acta a certificar pegada en él",
-          "• Certificación del gerente general donde se certifique que las firmas de los accionistas que suscriben el acta la corresponde a cada uno de ellos",
+          "• Certificación del gerente general donde se certifique que las firmas de los accionistas que suscriben el acta le corresponde a cada uno de ellos",
           "• Presencia del Gerente General",
           "• Copia de DNI del Gerente General",
           "• Solicitud debidamente completada (brindada por la notaría)"
@@ -279,7 +279,7 @@ export const service = [
           "• Presencia y documento de identidad de gerente general",
           "• Ficha RUC",
           "• Copia literal de sociedad",
-          "• Acta donde se acuerde el nombramiento, remoción, aceptación renuncia o revocación de representantes o gerente general",
+          "• Acta donde se acuerde el nombramiento, remoción, aceptación, renuncia o revocación de representantes o gerente general",
           "• Certificación del gerente general sobre la autenticidad de las firmas de los accionistas que suscriben el acta",
           "• Minuta autorizada por abogado",
           "• Vigencia de poder del Gerente General actual"
@@ -331,7 +331,7 @@ export const service = [
   },
   {
     slug: "autorizacion",
-    titulo: "Autorización",
+    titulo: "Autorización de viaje",
     icono: autorizacion,
     imagen: imgAutorizacion,
     secciones:[
@@ -392,7 +392,7 @@ export const service = [
       "• Documento de identidad de anticipante y anticipado(s).",
       "• Partida de nacimiento de los hijos.",
       "• Copia Literal de inmuebles.",
-      "• Declaración Jurada de Autoavalúo HR y PU del año en curso.",
+      "• Declaración Jurada de Autovalúo HR y PU del año en curso.",
       "• Constancia de No Adeudo de impuesto predial."
     ]
   },
@@ -403,10 +403,10 @@ export const service = [
     imagen: imgDonacion,
     requisitos:[
       "• Minuta autorizada por abogado.",
-      "• Documento de identidad de donante y donatorio.",
+      "• Documento de identidad de donante y donatario.",
       "• Copia literal del inmueble.",
       "• Constancia de no adeudo del impuesto predial.",
-      "• Declaración Jurada de Autoavalúo, HR, PU del año en curso.",
+      "• Declaración Jurada de Autovalúo, HR, PU del año en curso.",
       "• Constancia de pago de impuesto alcabala (SAT) o inafectación, de ser el caso."
     ]
   },
@@ -423,7 +423,7 @@ export const service = [
       "• Copia certificada de la Sentencia Judicial firme o Acta de Conciliación que regule los regímenes de patria potestad, alimentos, tenencia y visitas.",
       "• Copia certificada de la Sentencia Judicial firme o Acta de Conciliación que regule los regímenes de curatela, alimentos y visitas de los hijos mayores con incapacidad, de ser el caso.",
       "• Copia certificada de la Sentencia Judicial firme que declare la interdicción del hijo mayor con incapacidad y que nombre a su curador, si lo hubiera.",
-      "• Escritura Pública inscrita en los Registros Públicos de Separación de Patrimonios; o, en su defecto, Declaración Jurada con firma e hulla digital de ambos cónyuges, manifestando carecer de bienes sujetos al régimen de sociedad de gananciales.",
+      "• Escritura Pública inscrita en los Registros Públicos de Separación de Patrimonios; o, en su defecto, Declaración Jurada con firma e huella digital de ambos cónyuges, manifestando carecer de bienes sujetos al régimen de sociedad de gananciales.",
       "• Escritura Pública inscrita en los Registros Públicos de sustitución o liquidación del régimen patrimonial, si correspondiera.",],
     
     secciones:[
@@ -552,7 +552,7 @@ export const service = [
           "• Documento de identidad de otorgantes",
           "• Copia literal del inmueble",
           "• Pago de impuesto a la renta, de ser el caso",
-          "• HR, PU, Autoavalúo",
+          "• HR, PU, Autovalúo",
           "• Constancia de no adeudo de impuesto predial",
           "• Formato de declaración jurada de no pagar impuesto a la renta (SUNAT)"
         ]
@@ -565,7 +565,7 @@ export const service = [
           "• Declaración jurada de dos testigos mayores de edad que conozcan a la persona adulta mayor y den fe de la imposibilidad que tiene de manifestar su voluntad",
           "• Declaración jurada de la persona que va a ser apoyo de no tener antecedentes penales y judiciales",
           "• Declaración jurada de persona designada como apoyo de no ser deudor alimentario",
-          "Documento que acredite condición de apoyo",
+          "Documento que acredite condición de apoyo:",
           "• En caso sea cónyuge: Partida de Matrimonio",
           "• En caso sea hijo: Partida de Nacimiento",
           "• En caso sea hermano: Partida de Nacimiento de ambos",
@@ -586,11 +586,11 @@ export const service = [
       {
         titulo: "Hipoteca y levantamiento de hipoteca",         
           items: [
-              "Hipoteca",
+              "Hipoteca:",
               "• Documento de identidad de otorgantes.",
               "• Copia literal del inmueble.",
               "• Minuta autorizada por abogado.",
-              "Levantamiento de hipoteca",
+              "Levantamiento de hipoteca:",
               "• Minuta autorizada por abogado y firmada por acreedor.",
               "• Copia literal del inmueble."
           ],

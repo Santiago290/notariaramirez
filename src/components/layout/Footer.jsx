@@ -1,10 +1,6 @@
-import React from 'react'
 import Logo from "../../assets/icons/Logo"
 import { Link } from 'react-router-dom'
-import whatsapp from "../../assets/icons/Whatsapp.svg"
 import Container from './Container'
-import Whastapp from '../../assets/icons/Whastapp'
-import Whatsapp from '../../assets/icons/Whastapp'
 
 const Footer = () => {
   return (
@@ -52,9 +48,6 @@ const Footer = () => {
 
             <div className="flex flex-col items-center text-center lg:text-start w-56.25 divide-y divide-gris">
               <h2 className="font-bold text-gris-oscuro text-[14px] py-2 w-full">Legal</h2>
-              <Link to="#"  onClick={(e) => e.preventDefault()} className="text-gris text-[14px] font-light py-2 w-full">
-                Términos y condiciones
-              </Link>
               <Link to="/libro-reclamaciones" className="text-gris text-[14px] font-light py-2 w-full">
                 Libro de reclamaciones
               </Link>
@@ -64,11 +57,7 @@ const Footer = () => {
 
           <div className=" hidden lg:block w-full max-w-6xl border-t border-gray-700 my-10"></div>
 
-          <div className="mt-5 lg:mt-0 w-full max-w-275 flex flex-col lg:flex-row justify-start lg:justify-start gap-5 lg:gap-8.75 xl:gap-10 items-center ">
-            <a href="https://wa.me/51999999999"   target="_blank"  rel="noopener noreferrer" className="relative flex justify-center items-center w-15 md:w-20 h-15 md:h-20 lg:w-12.5 lg:h-12.5 overflow-hidden rounded-2xl bg-white group">
-              <span className="absolute inset-0 bg-green-500 scale-0 rounded-full transition-transform duration-500 ease-out group-hover:scale-150"></span>
-              <Whatsapp className="relative z-10 text-black group-hover:text-white transition-colors duration-200 ease-out w-8 h-8 md:w-6 md:h-6" />
-            </a>     
+          <div className="mt-5 lg:mt-0 w-full max-w-275 flex flex-col lg:flex-row justify-start lg:justify-start gap-5 lg:gap-8.75 xl:gap-10 items-center ">   
 
               <div className="flex flex-col text-center lg:text-start">
                   <span className="font-bold text-[14px] lg:text-[15px] text-gris-oscuro">Ubicación:</span>
